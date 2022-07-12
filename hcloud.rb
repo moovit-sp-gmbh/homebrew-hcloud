@@ -5,20 +5,20 @@
 class Hcloud < Formula
   desc ""
   homepage "https://github.com/moovit-sp-gmbh/hcloud-api-client"
-  version "0.0.16"
+  version "0.0.17"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.16/hcloud_0.0.16_darwin_arm64.tar.gz"
-      sha256 "9391ad88c8076a83d5dfe38eb55c64d143075b01ee5f2b1ee7ab575701dc7a3f"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.17/hcloud_0.0.17_darwin_arm64.tar.gz"
+      sha256 "6c3bddd46b4bd247bf75e6003234831955a1e1e8b6ec2e0c776f462cdd1aa519"
 
       def install
         bin.install "hcloud"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.16/hcloud_0.0.16_darwin_amd64.tar.gz"
-      sha256 "ad068d26be0680260918611c874c6896445ac100ca5e72489c065afd9fee5e49"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.17/hcloud_0.0.17_darwin_amd64.tar.gz"
+      sha256 "fc5ea41afe7284192e4c64f7deabc3a57a9cbb192675c736f6995a501f8dccd8"
 
       def install
         bin.install "hcloud"
@@ -27,17 +27,17 @@ class Hcloud < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.16/hcloud_0.0.16_linux_amd64.tar.gz"
-      sha256 "2cf4423eeee637623a6f5a2c5985dddb45d858cf3f7392ba1d73ba8540065a3b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.17/hcloud_0.0.17_linux_arm64.tar.gz"
+      sha256 "54dffea4d2d53b68b9776497a7374d6ca8ea2abe45f8cfed7de95164cf4aea3f"
 
       def install
         bin.install "hcloud"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.16/hcloud_0.0.16_linux_arm64.tar.gz"
-      sha256 "9a3df813e0d66ef4ef9122deadab752cd11d64a644fe97fff02944b222f447b1"
+    if Hardware::CPU.intel?
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.17/hcloud_0.0.17_linux_amd64.tar.gz"
+      sha256 "559b57198e2f8032fb292edf713e4b3809eb22a7e5bb9d1b030752d93ca278c5"
 
       def install
         bin.install "hcloud"
