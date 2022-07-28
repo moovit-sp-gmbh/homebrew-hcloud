@@ -5,20 +5,20 @@
 class Hcloud < Formula
   desc ""
   homepage "https://github.com/moovit-sp-gmbh/hcloud-api-client"
-  version "0.0.18"
+  version "0.0.19"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.18/hcloud_0.0.18_darwin_amd64.tar.gz"
-      sha256 "74b5f298bec25725029770eea9498075c1deeb076b237b109939d16a0c1adcc3"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/0.0.19/hcloud_0.0.19_darwin_amd64.tar.gz"
+      sha256 "3f189e031ddcb6f6d6035c4c6350e51fa50888a825077abfd452836ee6ecdd14"
 
       def install
         bin.install "hcloud"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.18/hcloud_0.0.18_darwin_arm64.tar.gz"
-      sha256 "cfc9a0195cc4a98ee6e6f437ee614b5eb3b39b3b6d3f3b331ca7df08fa6f3546"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/0.0.19/hcloud_0.0.19_darwin_arm64.tar.gz"
+      sha256 "116aa75531a5736c6e0a8ba3e67f3206ccf9898a2a6dd11a2b58af344aafb654"
 
       def install
         bin.install "hcloud"
@@ -28,16 +28,16 @@ class Hcloud < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.18/hcloud_0.0.18_linux_arm64.tar.gz"
-      sha256 "51d197b6e0559772500d8743ea223cbadf97399ea35d56a5582b8b34696fdc0f"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/0.0.19/hcloud_0.0.19_linux_arm64.tar.gz"
+      sha256 "e3428bedc95966a7115231ccc9590afc5ac63b4d8ab90ff43e89024eb4667586"
 
       def install
         bin.install "hcloud"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/v0.0.18/hcloud_0.0.18_linux_amd64.tar.gz"
-      sha256 "e4c22256b3fea4fbbfaf7e68de305ecd85f225360ae07ca7defe75a0696306c5"
+      url "https://github.com/moovit-sp-gmbh/hcloud-api-client/releases/download/0.0.19/hcloud_0.0.19_linux_amd64.tar.gz"
+      sha256 "fabc12bbec1dde2a10cd0ac167d9853742ea5fbd6c737745c38efef1b6a94576"
 
       def install
         bin.install "hcloud"
